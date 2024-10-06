@@ -64,7 +64,7 @@
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 
                 document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-                
+
                 this.classList.add('active');
             });
         });
@@ -82,9 +82,13 @@
         scrollTopBtn.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
-        
+
         document.getElementById('name-title').addEventListener('click', function() {
-            this.style.color = '#FFD700'; // Gold color hex code
+            if (this.style.color === 'rgb(255, 0, 0)') { // Check if current color is red
+                this.style.color = ''; // Reset to the default color
+            } else {
+                this.style.color = '#FF0000'; // Change to red
+            }
         });
     </script>
 </body>
