@@ -7,6 +7,36 @@ body {
     color: #333;
 }
 
+nav {
+    background-color: #00b3b3;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav ul li a.active {
+    border-bottom: 2px solid #ffffff;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
 .container {
     width: 70%;
     margin: 20px auto;
@@ -80,4 +110,17 @@ body {
 
 .content-section a:hover {
     text-decoration: underline;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00b3b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
 }
