@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Menu -->
     <nav>
         <ul>
             <li><a href="#introduction">Introduction</a></li>
@@ -16,7 +15,6 @@
         </ul>
     </nav>
 
-    <!-- Main Content Container -->
     <div class="container">
         <header class="main-info">
             <h1>Pierre Faiz</h1>
@@ -24,15 +22,11 @@
             <p>Discord: pierref1_22765</p>
         </header>
 
-        <!-- Profile Image -->
         <img src="me.png" alt="Pierre Faiz" class="profile-img">
 
-        <!-- Sections for Content -->
         <section id="introduction" class="content-section">
             <h2>Introduction</h2>
-            <p>
-                Hi, my name is Pierre Faiz and I’m a freshman here at Lewis. I come from a family of four, including my brother, mom, dad, and me. My brother is 21 and a senior at Illinois State University. I’m majoring in Computer Science and have some coding experience from a CS class in high school. I currently have no minor.
-            </p>
+            <p>Hi, my name is Pierre Faiz and I’m a freshman here at Lewis. I come from a family of four, including my brother, mom, dad, and me. My brother is 21 and a senior at Illinois State University. I’m majoring in Computer Science and have some coding experience from a CS class in high school. I currently have no minor.</p>
         </section>
 
         <section id="learning" class="content-section">
@@ -56,17 +50,13 @@
 
         <section id="fun-fact" class="content-section">
             <h2>Fun Fact</h2>
-            <p>
-                I was born in Egypt and can speak Arabic.
-            </p>
+            <p>I was born in Egypt and can speak Arabic.</p>
         </section>
     </div>
 
-    <!-- Scroll to Top Button -->
     <button id="scrollTopBtn">⬆️</button>
 
     <script>
-        // Smooth Scrolling for Navigation Links
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -76,7 +66,6 @@
             });
         });
 
-        // Scroll to Top Button Visibility
         const scrollTopBtn = document.getElementById("scrollTopBtn");
 
         window.onscroll = function () {
@@ -87,7 +76,6 @@
             }
         };
 
-        // Smooth Scroll to Top
         scrollTopBtn.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
         });
