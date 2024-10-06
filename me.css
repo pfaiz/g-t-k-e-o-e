@@ -1,20 +1,27 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f8f9fa;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     color: #333;
+    scroll-behavior: smooth;
 }
 
 nav {
-    background-color: #00b3b3;
+    background-color: #007d7e;
     text-align: center;
     padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
 }
 
@@ -27,30 +34,30 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: 700;
+    padding: 10px 15px;
 }
 
-nav ul li a.active {
-    border-bottom: 2px solid #ffffff;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
+nav ul li a:hover, nav ul li a.active {
+    background-color: #ffffff;
+    color: #007d7e;
+    border-radius: 5px;
 }
 
 .container {
     width: 70%;
-    margin: 20px auto;
+    margin: 100px auto 20px;
     background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .main-info {
-    background-color: #333;
+    background-color: #007d7e;
     color: #ffffff;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
 .main-info h1 {
@@ -60,67 +67,51 @@ nav ul li a:hover {
 }
 
 .main-info a {
-    color: #00b3b3;
+    color: #ffdd59;
     text-decoration: none;
-}
-
-.main-info a:hover {
-    color: #00b3b3;
 }
 
 .profile-img {
     display: block;
-    margin: 20px auto;
+    margin: 30px auto;
     width: 150px;
     height: auto;
     border-radius: 50%;
-    border: 3px solid #00b3b3;
+    border: 3px solid #007d7e;
 }
 
 .content-section {
-    padding: 20px 0;
+    margin-bottom: 40px;
 }
 
 .content-section h2 {
-    color: #00b3b3;
+    color: #007d7e;
     font-size: 1.8em;
-    border-bottom: 2px solid #00b3b3;
+    border-bottom: 3px solid #007d7e;
     padding-bottom: 5px;
+    margin-bottom: 20px;
 }
 
-.content-section p {
-    font-size: 1.1em;
+.content-section p, .content-section ul {
     margin-top: 10px;
+    font-size: 1.1em;
 }
 
 .content-section ul {
-    list-style-type: square;
-    margin: 20px 0;
     padding: 0 20px;
-}
-
-.content-section ul li {
-    margin-bottom: 10px;
-}
-
-.content-section a {
-    color: #007777;
-    text-decoration: none;
-}
-
-.content-section a:hover {
-    text-decoration: underline;
 }
 
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #00b3b3;
+    bottom: 30px;
+    right: 30px;
+    background-color: #007d7e;
     color: #ffffff;
     border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 20px;
     cursor: pointer;
+    width: 50px;
+    height: 50px;
 }
