@@ -3,7 +3,8 @@
 <head>
     <title>Pierre Faiz’s Page</title>
     <link rel="stylesheet" type="text/css" href="me.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" 
+          rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -26,7 +27,10 @@
 
         <section id="introduction" class="content-section">
             <h2>Introduction</h2>
-            <p>Hi, my name is Pierre Faiz and I’m a freshman here at Lewis. I come from a family of four, including my brother, mom, dad, and me. My brother is 21 and a senior at Illinois State University. I’m majoring in Computer Science and have some coding experience from a CS class in high school. I currently have no minor.</p>
+            <p>Hi, my name is Pierre Faiz and I’m a freshman here at Lewis. I come from a family of four, 
+               including my brother, mom, dad, and me. My brother is 21 and a senior at Illinois State 
+               University. I’m majoring in Computer Science and have some coding experience from a CS class 
+               in high school. I currently have no minor.</p>
         </section>
 
         <section id="learning" class="content-section">
@@ -43,8 +47,10 @@
         <section id="hobbies" class="content-section">
             <h2>My Favorite Hobbies</h2>
             <ul>
-                <li>Basketball (<a href="https://kids.britannica.com/kids/article/basketball/352831" target="_blank">More Info On Basketball</a>)</li>
-                <li>Swimming (<a href="https://www.medicinenet.com/swimming/article.htm" target="_blank">More Info On Swimming</a>)</li>
+                <li>Basketball (<a href="https://kids.britannica.com/kids/article/basketball/352831" 
+                      target="_blank">More Info On Basketball</a>)</li>
+                <li>Swimming (<a href="https://www.medicinenet.com/swimming/article.htm" 
+                      target="_blank">More Info On Swimming</a>)</li>
             </ul>
         </section>
 
@@ -62,9 +68,8 @@
                 e.preventDefault();
                 const targetElement = document.querySelector(this.getAttribute('href'));
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                
-                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
 
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
                 this.classList.add('active');
             });
         });
