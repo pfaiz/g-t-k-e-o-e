@@ -6,15 +6,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation Menu -->
     <nav>
         <ul>
             <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#learning">What I Hope to Learn</a></li>
+            <li><a href="#learning">Learning Goals</a></li>
             <li><a href="#hobbies">Hobbies</a></li>
             <li><a href="#fun-fact">Fun Fact</a></li>
         </ul>
     </nav>
-    
+
+    <!-- Main Content Container -->
     <div class="container">
         <header class="main-info">
             <h1>Pierre Faiz</h1>
@@ -22,15 +24,14 @@
             <p>Discord: pierref1_22765</p>
         </header>
 
+        <!-- Profile Image -->
         <img src="me.png" alt="Pierre Faiz" class="profile-img">
 
+        <!-- Sections for Content -->
         <section id="introduction" class="content-section">
             <h2>Introduction</h2>
             <p>
-                Hi, my name is Pierre Faiz and I’m a freshman here at Lewis. I come from a family of 
-                four, including my brother, mom, dad, and me. My brother is 21 and a senior at Illinois State University.
-                I’m majoring in Computer Science and have some coding experience from a CS class in 
-                high school. I currently have no minor.
+                Hi, my name is Pierre Faiz and I’m a freshman here at Lewis. I come from a family of four, including my brother, mom, dad, and me. My brother is 21 and a senior at Illinois State University. I’m majoring in Computer Science and have some coding experience from a CS class in high school. I currently have no minor.
             </p>
         </section>
 
@@ -46,16 +47,10 @@
         </section>
 
         <section id="hobbies" class="content-section">
-            <h2>My Favorite Hobby / Activity</h2>
+            <h2>My Favorite Hobbies</h2>
             <ul>
-                <li>
-                    Basketball 
-                    (<a href="https://kids.britannica.com/kids/article/basketball/352831" target="_blank">More Info On Basketball</a>)
-                </li>
-                <li>
-                    Swimming 
-                    (<a href="https://www.medicinenet.com/swimming/article.htm" target="_blank">More Info On Swimming</a>)
-                </li>
+                <li>Basketball (<a href="https://kids.britannica.com/kids/article/basketball/352831" target="_blank">More Info On Basketball</a>)</li>
+                <li>Swimming (<a href="https://www.medicinenet.com/swimming/article.htm" target="_blank">More Info On Swimming</a>)</li>
             </ul>
         </section>
 
@@ -67,9 +62,21 @@
         </section>
     </div>
 
-    <button id="scrollTopBtn">Top</button>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn">⬆️</button>
 
     <script>
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll to Top Button Visibility
         const scrollTopBtn = document.getElementById("scrollTopBtn");
 
         window.onscroll = function () {
@@ -80,25 +87,9 @@
             }
         };
 
+        // Smooth Scroll to Top
         scrollTopBtn.addEventListener("click", () => {
             window.scrollTo({ top: 0, behavior: "smooth" });
-        });
-
-        window.addEventListener("scroll", () => {
-            const sections = document.querySelectorAll("section");
-            const navLinks = document.querySelectorAll("nav ul li a");
-
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 50) {
-                    navLinks.forEach((link) => {
-                        link.classList.remove("active");
-                        if (link.getAttribute("href").substring(1) === section.getAttribute("id")) {
-                            link.classList.add("active");
-                        }
-                    });
-                }
-            });
         });
     </script>
 </body>
