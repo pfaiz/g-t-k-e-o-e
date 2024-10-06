@@ -1,9 +1,10 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     background-color: #f0f0f0;
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    color: #333;
 }
 
 .container {
@@ -11,23 +12,31 @@ body {
     margin: 20px auto;
     background-color: #ffffff;
     padding: 20px;
-    border: 1px solid #cccccc;
+    border: 1px solid #00b3b3;
+    border-radius: 8px;
 }
 
 .main-info {
-    background-color: #333333;
+    background-color: #00b3b3;
     color: #ffffff;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
 }
 
 .main-info h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 2.5em;
+    font-weight: 700;
 }
 
 .main-info a {
-    color: #f7c14f;
+    color: #ffffff;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.main-info a:hover {
+    color: #333333;
 }
 
 .profile-img {
@@ -35,22 +44,31 @@ body {
     margin: 20px auto;
     width: 150px;
     height: auto;
+    border-radius: 50%;
+    border: 4px solid #00b3b3;
 }
 
 .content-section {
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 .content-section h2 {
-    color: #333333;
-    font-size: 1.5em;
-    border-bottom: 2px solid #333333;
+    color: #00b3b3;
+    font-size: 1.8em;
+    border-bottom: 2px solid #00b3b3;
     padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.content-section p {
+    font-size: 1.1em;
+    margin-top: 10px;
+    color: #333333;
 }
 
 .content-section ul {
     list-style-type: square;
-    margin: 15px 0;
+    margin: 20px 0;
     padding: 0 20px;
 }
 
@@ -58,3 +76,11 @@ body {
     margin-bottom: 10px;
 }
 
+.content-section a {
+    color: #00b3b3;
+    text-decoration: none;
+}
+
+.content-section a:hover {
+    text-decoration: underline;
+}
