@@ -57,15 +57,12 @@
     <button id="scrollTopBtn">⬆️</button>
 
     <script>
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetElement = document.querySelector(this.getAttribute('href'));
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                
-                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
-                
-                this.classList.add('active');
+        const sections = document.querySelectorAll('.content-section');
+
+        sections.forEach(section => {
+            section.addEventListener('click', () => {
+                sections.forEach(sec => sec.classList.remove('focused'));
+                section.classList.add('focused');
             });
         });
 
