@@ -57,12 +57,17 @@
     <button id="scrollTopBtn">⬆️</button>
 
     <script>
-        const sections = document.querySelectorAll('.content-section');
-
-        sections.forEach(section => {
-            section.addEventListener('click', () => {
-                sections.forEach(sec => sec.classList.remove('focused'));
-                section.classList.add('focused');
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetElement = document.querySelector(this.getAttribute('href'));
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                
+                // Remove active state from all links
+                document.querySelectorAll('nav a').forEach(link => link.classList.remove('active'));
+                
+                // Set active state for clicked link
+                this.classList.add('active');
             });
         });
 
