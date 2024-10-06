@@ -6,6 +6,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#learning">What I Hope to Learn</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#fun-fact">Fun Fact</a></li>
+        </ul>
+    </nav>
+    
     <div class="container">
         <header class="main-info">
             <h1>Pierre Faiz</h1>
@@ -15,7 +24,7 @@
 
         <img src="me.png" alt="Pierre Faiz" class="profile-img">
 
-        <section class="content-section">
+        <section id="introduction" class="content-section">
             <h2>Introduction</h2>
             <p>
                 Hi, my name is Pierre Faiz and I’m a freshman here at Lewis. I come from a family of 
@@ -25,7 +34,7 @@
             </p>
         </section>
 
-        <section class="content-section">
+        <section id="learning" class="content-section">
             <h2>What I Hope to Learn in this Course</h2>
             <ul>
                 <li>How to code in Java</li>
@@ -36,7 +45,7 @@
             </ul>
         </section>
 
-        <section class="content-section">
+        <section id="hobbies" class="content-section">
             <h2>My Favorite Hobby / Activity</h2>
             <ul>
                 <li>
@@ -50,12 +59,47 @@
             </ul>
         </section>
 
-        <section class="content-section">
+        <section id="fun-fact" class="content-section">
             <h2>Fun Fact</h2>
             <p>
                 I was born in Egypt and can speak Arabic.
             </p>
         </section>
     </div>
+
+    <button id="scrollTopBtn">Top</button>
+
+    <script>
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+
+        scrollTopBtn.addEventListener("click", () => {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+
+        window.addEventListener("scroll", () => {
+            const sections = document.querySelectorAll("section");
+            const navLinks = document.querySelectorAll("nav ul li a");
+
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 50) {
+                    navLinks.forEach((link) => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href").substring(1) === section.getAttribute("id")) {
+                            link.classList.add("active");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
